@@ -26,9 +26,12 @@ HEADERS += CheckUpdateBaseQt.h\
     CheckUpdateBaseQtResult.h \
     CheckUpdateBaseQtError.h \
     CheckUpdateBaseQtErrorImpl.h \
-    CheckUpdateBaseQtResultImpl.h
+    CheckUpdateBaseQtResultImpl.h \
+    Version.h
 
 unix {
     target.path = /usr/lib
     INSTALLS += target
 }
+
+RC_FILE += CheckUpdateBaseQt.rc
