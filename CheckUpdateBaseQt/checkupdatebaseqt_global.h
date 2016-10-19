@@ -1,0 +1,13 @@
+#pragma once
+//#ifndef CHECKUPDATEBASEQT_GLOBAL_H
+//#define CHECKUPDATEBASEQT_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(CHECKUPDATEBASEQT_LIBRARY)
+#  define SHARED_EXPORT Q_DECL_EXPORT
+#else
+#  define SHARED_EXPORT Q_DECL_IMPORT
+#endif
+
+//#endif // CHECKUPDATEBASEQT_GLOBAL_H
