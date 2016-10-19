@@ -6,6 +6,8 @@
 
 class CheckUpdateBaseQtImpl : public CheckUpdateBaseQt
 {
+    friend class CheckUpdateBaseQt;
+
     struct Version
     {
         int v1;

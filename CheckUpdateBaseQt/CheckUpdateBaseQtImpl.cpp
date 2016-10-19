@@ -12,7 +12,7 @@ void CheckUpdateBaseQtImpl::SetSink(CheckUpdateBaseQtSink *sink)
 
 void CheckUpdateBaseQtImpl::SetRemoteSourceVersionUrl(const QUrl &url)
 {
-    mRemoteSourceVersionUrl = rul;
+    mRemoteSourceVersionUrl = url;
 }
 
 void CheckUpdateBaseQtImpl::SetAppId(const QString &appId)

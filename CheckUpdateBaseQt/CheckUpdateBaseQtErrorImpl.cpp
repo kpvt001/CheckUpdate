@@ -2,7 +2,7 @@
 
 CheckUpdateBaseQtErrorImpl::CheckUpdateBaseQtErrorImpl()
     : mCode(0)
-    , CheckUpdateBaseQtErrork()
+    , CheckUpdateBaseQtError()
 {
 
 }
