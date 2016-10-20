@@ -2,7 +2,8 @@
 
 #include "CheckUpdateBaseQtImpl.h"
 
-CheckUpdateBaseQt::CheckUpdateBaseQt()
+CheckUpdateBaseQt::CheckUpdateBaseQt(QObject *parent)
+    : QObject(parent)
 {
 }
 

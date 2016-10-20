@@ -6,6 +6,7 @@
 
 #include <QString>
 #include <QUrl>
+#include <QObject>
 
 #include "CheckUpdateBaseQtResult.h"
 #include "CheckUpdateBaseQtError.h"
@@ -20,23 +21,21 @@ public:
 
 
 
-class SHARED_EXPORT CheckUpdateBaseQt
+class SHARED_EXPORT CheckUpdateBaseQt : public QObject
 {
-
+    //Q_OBJECT
 public:
-    static CheckUpdateBaseQt* Create();
+    void virtual Start() = 0;
     void virtual SetSink(CheckUpdateBaseQtSink *sink) = 0;
     //void virtual SetLocalRootPath(const QString &rootPath);
     void virtual SetRemoteSourceVersionUrl(const QUrl &url) = 0;
     void virtual SetAppId(const QString &appId) = 0;
     void virtual SetGroupId(const QString &groupId) = 0;
-
-    // If version[3](build version) is not 0, only check version[3]
-    //   , otherwise check version[0-2].
     void virtual SetLocalVersion(const int version[]) = 0;
+    static CheckUpdateBaseQt* Create();
 
 protected:
-    CheckUpdateBaseQt();
+    CheckUpdateBaseQt(QObject *parent = nullptr);
 };
 
 //#endif // CHECKUPDATEBASEQT_H
