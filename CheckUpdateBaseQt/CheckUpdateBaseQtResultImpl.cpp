@@ -7,12 +7,12 @@ CheckUpdateBaseQtResultImpl::CheckUpdateBaseQtResultImpl()
 
 }
 
-bool CheckUpdateBaseQtResultImpl::RemoteHasNewVersion() const
+bool CheckUpdateBaseQtResultImpl::RemoteVersionIsNewer() const
 {
     return mRemoteHasNewVersion;
 }
 
-void CheckUpdateBaseQtResultImpl::SetRemoteHasNewVersion(bool b)
+void CheckUpdateBaseQtResultImpl::SetRemoteVersionIsNewer(bool b)
 {
     mRemoteHasNewVersion = b;
 }
@@ -57,4 +57,9 @@ QString CheckUpdateBaseQtResultImpl::FileDownloadPageUrlString() const
 void CheckUpdateBaseQtResultImpl::SetFileDownloadPageUrlString(const QString &page)
 {
     mFileDownloadPageUrlString = page;
+}
+
+bool CheckUpdateBaseQtResultImpl::IsHeld() const
+{
+    return mIsHeld;
 }

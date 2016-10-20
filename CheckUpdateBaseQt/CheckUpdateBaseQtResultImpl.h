@@ -2,6 +2,8 @@
 //#ifndef CHECKUPDATEBASEQTRESULTIMPL_H
 //#define CHECKUPDATEBASEQTRESULTIMPL_H
 
+#include <QJsonObject>
+
 #include "CheckUpdateBaseQtResult.h"
 
 class CheckUpdateBaseQtResultImpl : public CheckUpdateBaseQtResult
@@ -9,9 +11,10 @@ class CheckUpdateBaseQtResultImpl : public CheckUpdateBaseQtResult
 public:
     CheckUpdateBaseQtResultImpl();
 
-    virtual bool RemoteHasNewVersion() const;
-    virtual void SetRemoteHasNewVersion(bool b);
+    virtual bool RemoteVersionIsNewer() const;
+    virtual void SetRemoteVersionIsNewer(bool b);
     virtual void Hold();
+    virtual bool IsHeld() const;
     virtual void SetHold(bool hold);
     virtual void GetRemoteSourceVersion(int *version);
     virtual void SetRemoteSourceVersion(const int version[]);
