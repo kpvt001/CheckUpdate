@@ -13,6 +13,7 @@ public:
     virtual void SetCode(int code);
     virtual QString What() const;
     virtual void SetWhat(const QString &what);
+    virtual bool IsHeld() const;
     virtual void Hold();
     virtual void SetHold(bool hold);
 

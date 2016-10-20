@@ -36,3 +36,8 @@ void CheckUpdateBaseQtErrorImpl::SetHold(bool hold)
 {
     mIsHeld = hold;
 }
+
+bool CheckUpdateBaseQtErrorImpl::IsHeld() const
+{
+    return mIsHeld;
+}
